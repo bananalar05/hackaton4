@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIGMA</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>Pachaqtec</h1>
+        <h2>Hola, Mi nombre es Mery Vera</h2>
+        <figure><img src="./images/rick2.jpg" alt="banner" /></figure>
+      </section>
+      <section class="about-me">
+        <h2>Sobre mi</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed
+          dolor similique saepe dolores, dolorem possimus, suscipit maiores
+          voluptatibus rem dolore, quam temporibus explicabo alias. Quod quos
+          sed eos est molestias magnam dolorem iusto doloremque eveniet deleniti
+          temporibus ad, natus hic non sit impedit inventore quae nemo? Esse
+          adipisci sit asperiores sint voluptate illum dicta eos consequatur,
+          placeat delectus illo possimus iusto repellat cum, alias itaque
+          tenetur sunt eligendi quaerat facere? Deleniti molestias id, eos
+          accusantium illo laborum autem nemo, facilis recusandae cupiditate
+          quis et. Rerum laboriosam autem sint totam quae, facere cum quo
+          aliquam soluta temporibus fug modi quibusdam.
+        </p>
+        <div>
+          <a href="https://www.google.com.pe/">Ver Cv</a>
+        </div>
+      </section>
+      <section class="skills">
+        <h2>Mis Skills</h2>
+        <!--Mejor es usar div en vez de ul-li, porque REACT no acepta qe dentro de 1 ul haya divs, sino alreves por la relevancia-->
+        <div>
+          <div>
+            <h3>HTML</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <h3>CSS</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <h3>Javascript</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <h3>Vue</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <h3>Flexbox</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+          <div>
+            <h3>CSS Grid</h3>
+            <div class="white-box">
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="port">
+        <h2>Portafolio</h2>
+        <div>
+          <figure><img src="./images/image-4.png" alt="img4" /></figure>
+          <figure><img src="./images/image-5.png" alt="img5" /></figure>
+          <figure><img src="./images/image-6.png" alt="img6" /></figure>
+          <figure><img src="./images/image-7.png" alt="img7" /></figure>
+          <figure><img src="./images/image-8.png" alt="img8" /></figure>
+          <figure><img src="./images/image-9.png" alt="img9" /></figure>
+          <figure><img src="./images/image-10.png" alt="img10" /></figure>
+        </div>
+      </section>
+      <section class="customer">
+        <h2>Clientes</h2>
+        <div>
+          <figure><img src="./images/image.png" alt="img0" /></figure>
+          <figure><img src="./images/image-1.png" alt="img1" /></figure>
+          <figure><img src="./images/image-2.png" alt="img2" /></figure>
+          <figure><img src="./images/image-3.png" alt="img3" /></figure>
+        </div>
+      </section>
+      <section class="contact">
+        <h2>Contacto</h2>
+        <div>
+          <form action="#">
+            <div>
+              <input
+                name="names"
+                type="text"
+                placeholder="Nombres"
+                pattern="[A-Za-z ]+"
+                required
+              />
+              <input
+                name="last names"
+                type="text"
+                placeholder="Apellidos"
+                pattern="[A-Za-z ]+"
+                required
+              />
+            </div>
+            <div>
+              <input name="email" type="email" placeholder="E-mail" required />
+              <input
+                name="DNI"
+                type="text"
+                placeholder="DNI"
+                pattern="[A-Za-z0-9 ]+"
+                minlength="8"
+                required
+              />
+            </div>
+            <div>
+              <input
+                name="age"
+                type="number"
+                placeholder="Edad"
+                min="18"
+                max="80"
+                required
+              />
+              <select>
+                <option>Sexo</option>
+                <option id="sex" value="F">Femenino</option>
+                <option id="sex" value="M">Masculino</option>
+              </select>
+            </div>
+            <div>
+              <textarea placeholder="Comentarios" cols="83" rows="5"></textarea>
+            </div>
+            <div>
+              <button>Enviar</button>
+              <button type="reset">Resetear</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

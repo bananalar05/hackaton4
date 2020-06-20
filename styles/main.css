@@ -1,0 +1,250 @@
+/*REGLAS GLOBALES*/
+main {
+    /* Box-model */
+    width: 960px;
+    margin: 0 auto;
+}
+
+h2{
+    /* Box-model */
+    margin-bottom: 30px;
+
+    /*Tipografía*/
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+    /*la posición será absoluta en funcion del main que tacitamente es relativo???*/
+    /*es absoluta en relacion a su padre más cercano, si no encuentra al relativa, tomará al viewport*/
+    /*tuve que hacer una posicion relativa a .header*/
+    /*usualmente el h1 siempre es regla general*/
+    /*adiferencia del .header h2 - acá le puse width:100%  para que ocupe todo el ancho de la caja que lo contiene, porque no necesitaba un fondo de color*/
+
+    h1{   
+    /*Position*/
+    position: absolute;
+    top: 50px;
+
+    /*Box-model*/
+    width: 100%;
+
+    /* Typography */
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 74px;
+    color: #ffff;
+    text-align: center;   
+    
+    /* Visual */
+    background-color: black; 
+}
+h3{
+    /*Tipografía*/
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Pseudoclases de validación*/
+input:required {
+    border: 1px solid red;
+}
+
+input:valid {
+     border: 1px solid green;
+}
+
+input:focus {
+    background: palevioletred;
+}
+
+/*REGLAS ESPECIFICAS*/
+
+/*Regla para el h del header*/
+  /* Positioning */
+.header{
+    /* Positioning */
+    position: relative;
+}
+
+.header h2{
+    /*la posición será absoluta en funcion del main que tacitamente es relativo??*/
+    /*para se posicionara bien y no cambie en funcion de aumentar o bajar zoom, puse un relativo al .header*/
+    
+    /* Positioning */
+    position: absolute;
+    left: 52px;
+    top: 300px;
+
+    /* Box-model */
+    width: 365px;
+    height: 80px;
+    padding: 10px;
+
+    /* Typography */
+    font-family: helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 42px;
+    color: white;
+
+    /* Visual */
+    background: rgba(114, 153, 254, 0.5);
+    border-radius: 10px; 
+}
+
+/*display-block Regla para eliminar el espacio blanco debajo del banner*/
+.header img{
+    /* Box-model */
+    display: block;
+    width: 960px;
+    height: 525px;
+    
+    /* Visual */
+    object-fit: cover;
+}
+
+/*Reglas acerca de mi*/
+.about-me{
+    /* Box-model */
+        padding: 40px;
+
+    /* Visual */
+    background: #7299fe;
+}
+
+
+/*Reglas del boton a href*/
+.about-me div{
+    /* Box-model */
+    margin-top: 25px;
+    display: inline-block;
+    border: solid;
+    padding: 10px 30px;
+    
+    /* Typography */
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    /* Visual */
+    background: #d16fff;
+    border-radius: 30px;
+    }
+
+/*Reglas de mis skills*/
+.skills{
+    background: #9122ff;
+    padding: 40px;
+}
+.skills div{
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 22px;
+}
+
+.white-box{
+    width: 300px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    animation: progress 1s linear infinite;
+}
+.white-box div{
+    width: 200px;
+    height: 20px;
+    background: #57EFF9;
+    border-radius: 20px;
+}
+/*Reglas de portafolio*/
+.port{
+    background: #ffd233;
+    padding: 40px;
+}
+.port div{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    /*alinea horizontalmente*/
+    justify-items: center;
+    /*alinea verticalmente*/
+    align-items: center;
+    }
+
+/*Reglas de clientes*/
+.customer{
+    background: #3f4e62;
+    padding: 40px;
+}
+.customer div{
+    display: flex;
+    justify-content: space-between;
+
+    /*alinea horizontalmente*/
+    justify-items: center;
+    /*alinea verticalmente*/
+    align-items: center;
+}
+
+/*Reglas de contacto*/
+.contact{
+    height: 450px;
+    background: #1687a0;
+    padding: 40px;
+}
+
+.contact div {
+    width: 700px;
+    margin: 0 auto;
+}
+
+form div input{
+    width: 320px;
+    height: 50px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+form div select{
+    width: 328px;
+    height: 59px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+form div textarea{
+    width: 665px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+@keyframes progress {
+    from { 
+      left: -60%;
+    }
+    to { 
+      left: 0%;
+    }
+   }
+
+   .skill h4 {
+       color: white;
+   }
