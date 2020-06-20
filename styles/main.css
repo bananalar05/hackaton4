@@ -68,7 +68,8 @@ input:focus {
 /*REGLAS ESPECIFICAS*/
 
 /*Regla para el h del header*/
-  /* Positioning */
+
+    /* Positioning */
 .header{
     /* Positioning */
     position: relative;
@@ -115,7 +116,7 @@ input:focus {
 /*Reglas acerca de mi*/
 .about-me{
     /* Box-model */
-        padding: 40px;
+    padding: 40px;
 
     /* Visual */
     background: #7299fe;
@@ -142,10 +143,14 @@ input:focus {
 
 /*Reglas de mis skills*/
 .skills{
-    background: #9122ff;
+    /* Box-model */
     padding: 40px;
+
+    /* Visual */
+    background: #9122ff;
 }
-.skills div{
+.skills div{    
+    /* Box-model */
     margin-bottom: 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -153,11 +158,14 @@ input:focus {
 }
 
 .white-box{
+    /* Box-model */
     width: 300px;
     height: 20px;
+   
+    /* Visual */
+    animation: progress 1s linear infinite;
     background: #FFFFFF;
     border-radius: 10px;
-    animation: progress 1s linear infinite;
 }
 .white-box div{
     width: 200px;
@@ -167,13 +175,19 @@ input:focus {
 }
 /*Reglas de portafolio*/
 .port{
-    background: #ffd233;
+    /* Box-model */
     padding: 40px;
+
+    /* Visual */    
+    background: #ffd233;
 }
 .port div{
+    /* Box-model */
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    /*alinea horizontalmente*/
+
+    /* Typography */
+    /**alinea horizontalmente**/
     justify-items: center;
     /*alinea verticalmente*/
     align-items: center;
@@ -196,44 +210,62 @@ input:focus {
 
 /*Reglas de contacto*/
 .contact{
+    /* Box-model */
     height: 450px;
-    background: #1687a0;
     padding: 40px;
+
+    /* Visual */
+    background: #1687a0;   
 }
 
 .contact div {
+    /* Box-model */
     width: 700px;
     margin: 0 auto;
 }
 
 form div input{
+    /* Box-model */
     width: 320px;
     height: 50px;
     margin-right: 12px;
     margin-bottom: 15px;
+
+    /* Typography */
     font-size: 20px;
 }
 
 form div select{
+    /* Box-model */
     width: 328px;
     height: 59px;
     margin-bottom: 15px;
+    
+    /* Typography */
     font-size: 20px;
 }
 
 form div textarea{
+    /* Box-model */
     width: 665px;
     margin-bottom: 15px;
+
+    /* Typography */
     font-size: 20px;
 }
 
-button{
+.button{
+    /* Box-model */
     width: 150px;
     height: 50px;
-    font-size: 25px;
-    border-radius: 15px;
     margin-top: 10px;
-    margin: 0 auto;
+    margin: auto;
+
+    /* Typography */
+    font-size: 25px;
+    
+    /* Visual */
+    border-radius: 15px;
 }
 
 @keyframes progress {
