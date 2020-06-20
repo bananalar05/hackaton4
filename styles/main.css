@@ -4,19 +4,21 @@ main {
     width: 960px;
     margin: 0 auto;
 }
-
+h1, h2, h3{
+    /*Tipografía*/
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
 h2{
     /* Box-model */
     margin-bottom: 30px;
 
     /*Tipografía*/
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
     font-size: 26px;
-    text-align: center;
 }
-
 
     /*la posición será absoluta en funcion del main que tacitamente es relativo???*/
     /*es absoluta en relacion a su padre más cercano, si no encuentra al relativa, tomará al viewport*/
@@ -33,23 +35,16 @@ h2{
     width: 100%;
 
     /* Typography */
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
     font-size: 74px;
     color: #ffff;
-    text-align: center;   
     
     /* Visual */
     background-color: black; 
+    animation: up .4s infinite alternate ease-in-out;
 }
 h3{
     /*Tipografía*/
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
-    text-align: center;
 }
 
 /*Pseudoclases de validación*/
@@ -65,11 +60,11 @@ input:focus {
     background: palevioletred;
 }
 
+/*----------------------------------------------------------------------------------------------------*/
 /*REGLAS ESPECIFICAS*/
 
 /*Regla para el h del header*/
 
-    /* Positioning */
 .header{
     /* Positioning */
     position: relative;
@@ -90,24 +85,21 @@ input:focus {
     padding: 10px;
 
     /* Typography */
-    font-family: helvetica;
-    font-style: normal;
-    font-weight: bold;
     font-size: 30px;
     line-height: 42px;
     color: white;
 
     /* Visual */
-    background: rgba(114, 153, 254, 0.5);
+    background: rgba(114, 153, 254, 0.7);
     border-radius: 10px; 
+    animation: expand 4s infinite;
 }
 
 /*display-block Regla para eliminar el espacio blanco debajo del banner*/
 .header img{
     /* Box-model */
     display: block;
-    width: 960px;
-    height: 525px;
+    width: 100%;
     
     /* Visual */
     object-fit: cover;
@@ -139,6 +131,8 @@ input:focus {
     /* Visual */
     background: #d16fff;
     border-radius: 30px;
+    animation: up .4s infinite alternate ease-in-out;
+
     }
 
 /*Reglas de mis skills*/
@@ -159,16 +153,15 @@ input:focus {
 
 .white-box{
     /* Box-model */
-    width: 300px;
+    width: 220px;
     height: 20px;
    
     /* Visual */
-    animation: progress 1s linear infinite;
     background: #FFFFFF;
     border-radius: 10px;
 }
 .white-box div{
-    width: 200px;
+    width: 190px;
     height: 20px;
     background: #57EFF9;
     border-radius: 20px;
@@ -185,33 +178,26 @@ input:focus {
     /* Box-model */
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-
-    /* Typography */
-    /**alinea horizontalmente**/
     justify-items: center;
-    /*alinea verticalmente*/
-    align-items: center;
-    }
+}
 
 /*Reglas de clientes*/
 .customer{
-    background: #3f4e62;
+    /* Box-model */
     padding: 40px;
+
+    /* Visual */ 
+    background: #3f4e62;
 }
 .customer div{
+    /* Box-model */
     display: flex;
     justify-content: space-between;
-
-    /*alinea horizontalmente*/
-    justify-items: center;
-    /*alinea verticalmente*/
-    align-items: center;
 }
 
 /*Reglas de contacto*/
 .contact{
     /* Box-model */
-    height: 450px;
     padding: 40px;
 
     /* Visual */
@@ -220,8 +206,8 @@ input:focus {
 
 .contact div {
     /* Box-model */
-    width: 700px;
-    margin: 0 auto;
+    width: 90%;
+    margin: 10px auto;
 }
 
 form div input{
@@ -268,15 +254,13 @@ form div textarea{
     border-radius: 15px;
 }
 
-@keyframes progress {
-    from { 
-      left: -60%;
-    }
-    to { 
-      left: 0%;
-    }
-   }
+@keyframes up{
+    0% {transform: translateY(-10px)}
+    100% {transform: translateY(10px);}
+}
 
-   .skill h4 {
-       color: white;
-   }
+@keyframes expand{
+    0% {transform:  rotate(0deg) scale(1);}
+    50% {transform: rotate(0deg) scale(1.3);}
+    100% {transform: rotate(0deg) scale(1)}
+}
